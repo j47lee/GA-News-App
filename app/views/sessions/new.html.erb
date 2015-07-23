@@ -1,0 +1,9 @@
+<h1>Sessions#new</h1>
+<p>Find me in app/views/sessions/new.html.erb</p>
+
+<h1>Log in Buster!</h1>
+<%= form_for User.new, url: sessions_path do |f| %>
+<div>Email: <%= f.text_field :email %></div>
+<div>Password: <%= f.password_field :password %></div>
+<div><%= f.submit "Login" %></div>
+<% end %>

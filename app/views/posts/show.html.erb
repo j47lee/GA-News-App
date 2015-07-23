@@ -6,6 +6,14 @@
 <div>
   <% @post.comments.each do |c| %>
   <p><%= c.body %></p>
+  <p>
+    <% if c.user %>
+    Created by: <%= c.user.name %>
+    <% else %>
+    Create by: Anonymous
+    <% end %>
+  </p>
+
   <% end %>
 </div>
 
